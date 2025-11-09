@@ -1,0 +1,64 @@
+# Example configuration for Margonem bot
+# NOTE: Use only with accounts and servers where you have permission.
+
+account:
+  username: "example_user"
+  password: "example_pass"
+  server:   "berufs"
+  startUrl: "https://www.margonem.pl/"
+
+profile:
+  name: "meadow-farm"
+  huntingGround:
+    mapId: "town-1"
+    centerX: 500
+    centerY: 500
+    radius: 200
+  waypoints:
+    - mapId: "town-1"
+      x: 600
+      y: 520
+      description: "Exit town gate"
+      action: "portal"
+      selector: "#gate-portal"
+    - mapId: "meadow"
+      x: 420
+      y: 380
+      description: "Center of meadow"
+      action: "walk"
+  townRespawn:
+    mapId: "town-1"
+    x: 480
+    y: 480
+
+combat:
+  hpThreshold: 30
+  mpThreshold: 20
+  targetPriority: ["Wolf", "Boar", "Fox"]
+  retargetOnDeath: true
+  maxEngageDistance: 250
+  minLevel: 1
+  maxLevel: 50
+
+behavior:
+  minDelayMs: 1000
+  maxDelayMs: 2000
+  mouseSpeedRange: 200
+  pathJitter: 6
+  idleBreakEvery: 30
+  idleBreakDuration: 6
+
+potions:
+  hpKey: "1"
+  hpBelow: 50
+  mpKey: "2"
+  mpBelow: 30
+  cooldownMs: 1200
+
+runtime:
+  headless: false
+  debug: true
+  userDataDir: "./.chrome-profile"
+  viewportWidth: 1400
+  viewportHeight: 800
+  screenshotDir: "./screenshots"

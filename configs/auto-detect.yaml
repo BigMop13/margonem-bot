@@ -1,0 +1,43 @@
+# Auto-Detect Mode Configuration
+# This is the SIMPLEST configuration - bot auto-detects everything!
+#
+# HOW TO USE:
+# 1. Log into Margonem manually
+# 2. Walk your character to the hunting ground
+# 3. Run the bot with: ./bin/margonem-bot --config configs/auto-detect.yaml
+# 4. Bot will automatically detect your location and start hunting all nearby mobs!
+
+account:
+  username: "YOUR_USERNAME"
+  password: "YOUR_PASSWORD"
+  server: "berufs"
+  startUrl: "https://www.margonem.pl/"
+
+combat:
+  hpThreshold: 20          # Retreat when HP below 20%
+  mpThreshold: 0           # Ignored (no potions)
+  targetPriority: []       # Empty = attack any mob
+  retargetOnDeath: true    # Immediately find next target
+  maxEngageDistance: 300   # Chase mobs within 300 pixels
+  minLevel: 0              # Attack any level
+  maxLevel: 999            # Attack any level
+
+behavior:
+  minDelayMs: 800          # Minimum delay between actions
+  maxDelayMs: 1800         # Maximum delay between actions
+  mouseSpeedRange: 200     # Mouse movement variance
+  pathJitter: 8            # Random position offset
+  idleBreakEvery: 40       # Take break every 40 actions
+  idleBreakDuration: 5     # Break for 5 seconds
+
+runtime:
+  headless: false          # Set to true to hide browser
+  debug: true              # Verbose logging
+  userDataDir: "./.chrome-profile"  # Save login session
+  viewportWidth: 1400
+  viewportHeight: 800
+  screenshotDir: "./screenshots"
+  autoDetectMode: true     # ENABLE AUTO-DETECT MODE!
+
+# No need to configure profile/waypoints/hunting ground!
+# Bot will detect everything automatically.

@@ -30,3 +30,12 @@ go.work.sum
 # Editor/IDE
 # .idea/
 # .vscode/
+
+# Bot-specific
+bin/
+screenshots/
+.chrome-profile/
+configs/config.yaml
+
+# Logs
+*.log
